@@ -14,4 +14,4 @@
 - **CSS** – Styling & animations.
 - **JavaScript** – Handling transitions & interactivity.
 
-## 📂 Folder Structure
+
