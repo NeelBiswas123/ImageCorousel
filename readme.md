@@ -14,4 +14,7 @@
 - **CSS** – Styling & animations.
 - **JavaScript** – Handling transitions & interactivity.
 
+## PREVIEW
 
+![alt text](Preview1.png)
+![alt text](Preview2.png)
