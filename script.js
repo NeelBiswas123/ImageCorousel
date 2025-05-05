@@ -51,12 +51,12 @@ window.onload = function () {
     document.querySelector('.next').addEventListener('click', nextSlide);
 
 // Auto slide
-    let slideInterval = setInterval(nextSlide, 5000);
+    let slideInterval = setInterval(nextSlide, 3000);
 
 // Pause on hover
     const sliderContainer = document.querySelector('.slider-container');
     sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
-    sliderContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 3000));
+    sliderContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 2000));
 
     
 
