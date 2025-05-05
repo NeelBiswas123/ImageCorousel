@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15vh;
+   
+    background: linear-gradient(pink, blue);
+    
+}
+
+
+
+/* the header section  */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+
+
+
+/* slide properties  */
+.slider-container {
+    width: 50vw;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* for below the dots area  */
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+
+
+/* for mobile and tablet devices */
+@media only screen and (max-width: 900px) {
+    body {
+     
+      background: lightblue;
+    }
+  
+    .slider-container {
+      width: 90vw;
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+  
+      /* Maintain 16:9 aspect ratio */
+      aspect-ratio: 16 / 11;
+  
+    /*  wider compatibility with older browsers: */
+    .slider-container::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+    }
+  
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+  
+    .slider img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+
+
