@@ -27,6 +27,7 @@ function initSlider() {
     const images = document.querySelectorAll('.slider img');
     const dotsContainer = document.querySelector('.dots');
 
+    console.log("Slider initialized with", images.length, "images");
     // Set slider width dynamically
     slider.style.width = `${images.length * 100}%`;
 
@@ -76,6 +77,9 @@ function initSlider() {
     let slideInterval = setInterval(nextSlide, 3000);
 
     // Pause on hover
+    // Force reflow to ensure layout is correct before hover bindings
+    void slider.offsetWidth;
+
     const sliderContainer = document.querySelector('.slider-container');
     sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
     sliderContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 3000));
