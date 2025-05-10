@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
     let index = 0;
     const slider = document.querySelector('.slider');
     const images = document.querySelectorAll('.slider img');
@@ -61,4 +61,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
 
-});
+};
