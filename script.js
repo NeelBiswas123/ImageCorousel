@@ -16,10 +16,11 @@ function waitForImagesToLoad(images, callback) {
     if (loaded === total) callback();
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     const images = document.querySelectorAll('.slider img');
     waitForImagesToLoad(images, initSlider);
 });
+
 
 function initSlider() {
     let index = 0;
