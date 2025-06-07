@@ -49,12 +49,14 @@ function initSlider() {
         dotsContainer.appendChild(dot);
     });
 
+    // update the dots when image changes 
     function updateDots() {
         document.querySelectorAll('.dot').forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
         });
     }
 
+    // showing the current slide 
     function showSlide() {
         slider.style.transform = `translateX(${-index * (100 / images.length)}%)`;
         updateDots();
@@ -74,11 +76,11 @@ function initSlider() {
     document.querySelector('.prev').addEventListener('click', prevSlide);
     document.querySelector('.next').addEventListener('click', nextSlide);
 
-    // Auto slide
+    // Auto slide(time 3s) 
     let slideInterval = setInterval(nextSlide, 3000);
 
-    // Pause on hover
-    // Force reflow to ensure layout is correct before hover bindings
+    // Pause on hover(when mouse on top of images)
+    // Force reflow to ensure layout is correct before hover bindings(It accesses the offsetWidth property of an element (slider), which forces the browser to recalculate layout (a reflow).)
     void slider.offsetWidth;
 
     const sliderContainer = document.querySelector('.slider-container');
